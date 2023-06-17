@@ -46,6 +46,8 @@ vim.o.relativenumber = true
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true })
 vim.api.nvim_set_keymap('', '<C-d>', '<C-d>zz', { noremap = true})
 vim.api.nvim_set_keymap('', '<C-u>', '<C-u>zz', { noremap = true})
+vim.api.nvim_set_keymap('', 'n', 'nzzzv', { noremap = true})
+vim.api.nvim_set_keymap('', 'N', 'Nzzzv', { noremap = true})
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -76,6 +78,7 @@ require('lazy').setup({
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
+  'embear/vim-uncrustify',
 
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
