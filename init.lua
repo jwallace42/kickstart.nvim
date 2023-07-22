@@ -39,9 +39,11 @@ P.S. You can delete this when you're done too. It's your config now :)
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.o.relativenumber = true
+vim.wo.cursorline = true
 
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true })
 vim.api.nvim_set_keymap('', '<C-d>', '<C-d>zz', { noremap = true})
@@ -49,7 +51,6 @@ vim.api.nvim_set_keymap('', '<C-u>', '<C-u>zz', { noremap = true})
 vim.api.nvim_set_keymap('', 'n', 'nzzzv', { noremap = true})
 vim.api.nvim_set_keymap('', 'N', 'Nzzzv', { noremap = true})
 
-vim.wo.cursorline = true
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
