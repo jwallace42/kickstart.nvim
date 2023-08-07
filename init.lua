@@ -39,15 +39,19 @@ P.S. You can delete this when you're done too. It's your config now :)
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.o.relativenumber = true
+vim.wo.cursorline = true
 
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true })
 vim.api.nvim_set_keymap('', '<C-d>', '<C-d>zz', { noremap = true})
 vim.api.nvim_set_keymap('', '<C-u>', '<C-u>zz', { noremap = true})
 vim.api.nvim_set_keymap('', 'n', 'nzzzv', { noremap = true})
 vim.api.nvim_set_keymap('', 'N', 'Nzzzv', { noremap = true})
+
+
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -79,6 +83,9 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
   'embear/vim-uncrustify',
+
+  -- Pratice Movement
+  'ThePrimeagen/vim-be-good',
 
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
